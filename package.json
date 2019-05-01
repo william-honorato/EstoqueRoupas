@@ -1,0 +1,22 @@
+{
+  "name": "estoqueroupas",
+  "version": "1.0.0",
+  "description": "Trabalho EC8 - Estoque de Roupas",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "William",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "mongodb": "^2.2.35",
+    "mongoskin": "^2.1.0",
+    "q": "^1.5.1",
+    "rootpath": "^0.1.2",
+    "thread-sleep": "^2.2.0"
+  },
+  "devDependencies": {}
+}
