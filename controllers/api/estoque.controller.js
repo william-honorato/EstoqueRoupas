@@ -11,7 +11,6 @@ router.delete('/:_id', deletarEstoqueRoupa);
 
 module.exports = router;
 
-
 function criarEstoqueRoupa(req, res) {
     estoqueService.create(req.body)
         .then(function () {

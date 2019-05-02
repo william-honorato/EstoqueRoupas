@@ -1,4 +1,5 @@
 {
     "connectionString": "mongodb://localhost:27017/Estoque",
-    "version": "1.0.0 - 18/04/2019"
+    "version": "1.0.0 - 18/04/2019",
+    "secret": "f46df5g465dfh1"
 }
