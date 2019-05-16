@@ -1,0 +1,97 @@
+Teste da API EstoqueRoupas com o Postman
+------------------------------------------------------------------------------------------
+
+Registrar Novo Usuário:
+Método POST
+http://127.0.0.1:6000/api/users/register
+{
+	"login":"teste",
+	"senha":"4321"
+}
+
+Retorna OK
+
+------------------------------------------------------------------------------------------
+
+Autenticar Usuário:
+Método POST
+http://127.0.0.1:6000/api/users/authenticate
+{
+	"login":"teste",
+	"senha":"4321"
+}
+
+É retornado ID e o token para as proximas autenticações
+{
+    
+	"userId": "5cddeee5ba0d3c1b14fc7586",
+    
+	"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1Y2RkZWVlNWJhMGQzYzFiMTRmYzc1ODYiLCJpYXQiOjE1NTgwNDg1OTV9.m05jy90WvoowilNUxpBGJ5oPPnVD772tNZ51uHF1pL0"
+
+}
+
+------------------------------------------------------------------------------------------
+
+Criar novo registro no estoque do roupas
+Método POST + Token
+http://127.0.0.1:6000/api/estoque/criar
+{
+   "DataEntrada":"29/04/2019",
+   "Tipo":"Camiseta",
+   "Marca":"Okdok",
+   "Características":"",
+   "Tamanho":"P",
+   "Cor":"Azul Escuro",
+   "ValorEtiquetaCompra":100,
+   "ValorPagoCompra":50,
+   "ValorMargem100":100,
+   "PreçoSugerido":100
+}
+
+Retorna OK
+
+------------------------------------------------------------------------------------------
+
+Deletar item do estoque
+Método DELETE + Token
+http://127.0.0.1:6000/api/estoque/ID_ITEM
+
+Retorna OK
+
+------------------------------------------------------------------------------------------
+
+Trazer todos itens do estoque
+Método GET + Token
+http://127.0.0.1:6000/api/estoque
+
+Retorna um json com os itens
+
+------------------------------------------------------------------------------------------
+
+Trazer um item especifico do estoque
+Método GET + Token
+http://127.0.0.1:6000/api/estoque/ID_ITEM
+
+Retorna um json com o item
+
+------------------------------------------------------------------------------------------
+Atualizar um item do estoque
+Método PUT + Token
+http://127.0.0.1:6000/api/estoque
+{
+	"id": "5cc9ffa10a458a2d88c4648d",
+	"DataEntrada":"29/04/2019",
+	"Tipo":"Camiseta",
+	"Marca":"BOSS",
+	"Características":"",
+	"Tamanho":"P",
+	"Cor":"Azul Escuro",
+	"ValorEtiquetaCompra":100,
+	"ValorPagoCompra":50,
+	"ValorMargem100":100,
+	"PreçoSugerido":100
+}
+
+Retorna OK
+
+------------------------------------------------------------------------------------------
